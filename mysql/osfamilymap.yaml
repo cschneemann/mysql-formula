@@ -80,7 +80,7 @@ Suse:
   pythonpkg: python-PyMySQL
     {% else %}
     {% if salt['grains.get']('osmajorrelease')|int == 12 %}
-  pythonpkg: python-pymysql
+  pythonpkg: python-mysql
     {% else %}
   pythonpkg: python2-pymysql
     {% endif %}
