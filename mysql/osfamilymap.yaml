@@ -79,7 +79,11 @@ Suse:
     # "old" package name up to Leap 42.x
   pythonpkg: python-PyMySQL
     {% else %}
+    {% if salt['grains.get']('osmajorrelease')|int == 12 %}
+  pythonpkg: python-pymysql
+    {% else %}
   pythonpkg: python2-pymysql
+    {% endif %}
     {% endif %}
 
   config:
