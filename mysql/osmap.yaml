@@ -43,6 +43,12 @@ CentOS:
         socket: /var/lib/mysql/mysql.sock
         bind_address: 127.0.0.1
 
+Suse:
+  serverpkg: mariadb
+  clientpkg: mariadb-client
+  service: mariadb
+  pythonpkg: python-mysql
+
 Fedora:
   serverpkg: mariadb-server
   clientpkg: mariadb
